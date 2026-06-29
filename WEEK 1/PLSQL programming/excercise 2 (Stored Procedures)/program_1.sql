@@ -1,0 +1,13 @@
+SET SERVEROUTPUT ON;
+
+CREATE OR REPLACE PROCEDURE greet_user
+AS
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Welcome to PL/SQL!');
+END;
+/
+
+BEGIN
+    greet_user;
+END;
+/
