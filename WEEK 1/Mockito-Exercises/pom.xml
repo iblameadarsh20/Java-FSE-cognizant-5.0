@@ -3,11 +3,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.adarsh.junit</groupId>
-  <artifactId>JUnit_Basic_Testing</artifactId>
+  <groupId>com.adarsh.mockito</groupId>
+  <artifactId>Mockito-Exercises</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>JUnit_Basic_Testing</name>
+  <name>Mockito-Exercises</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -45,6 +45,13 @@
       <artifactId>junit-jupiter-params</artifactId>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-core</artifactId>
+    <version>5.12.0</version>
+    <scope>test</scope>
+</dependency>
   </dependencies>
 
   <build>
