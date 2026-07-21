@@ -1,23 +1,22 @@
 package com.cognizant.springresthandson.controller;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cognizant.springresthandson.model.Country;
+import com.cognizant.springresthandson.service.CountryService;
 
 @RestController
 public class CountryController {
 
-    @RequestMapping("/country")
-    public Country getCountryIndia() {
+    @Autowired
+    private CountryService countryService;
 
-        ApplicationContext context =
-                new ClassPathXmlApplicationContext("country.xml");
+    @GetMapping("/countries/{code}")
+    public Country getCountry(@PathVariable String code) {
 
-        Country country = context.getBean("country", Country.class);
-
-        return country;
+        return countryService.getCountry(code);
     }
 }
